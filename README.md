@@ -8,7 +8,7 @@ after the company went dark so the catalog is not lost if the repo disappears.
 - **Scope:** all 25 releases, v0.0.1 (2025-03-19) through v1.25.1 (2026-07-21), every
   asset verbatim (~21.5 GB): Windows `.exe`, macOS `.dmg` + `.zip` (x64 + arm64),
   Linux `.AppImage`, plus the `.blockmap` and `latest*.yml` update metadata.
-- **Also the firmware library for [OpenFlow](https://github.com/traviswye/openflow)**, which
+- **Also the firmware library for [OpenFlow](https://github.com/create-collective/openflow)**, which
   downloads images from `firmware-history/` at runtime — see
   [Firmware library for OpenFlow](#firmware-library-for-openflow) below for the contract that
   keeps that working.
@@ -62,8 +62,13 @@ installer is not a decision to make by accident. So the app holds the index and 
 file on demand, from here.
 
 ```
-https://raw.githubusercontent.com/traviswye/nayaHistory/main/firmware-history/<path>
+https://raw.githubusercontent.com/create-collective/create-legacy-firmware/main/firmware-history/<path>
 ```
+
+OpenFlow 0.5.0 and earlier ask the repository's old address,
+`https://raw.githubusercontent.com/traviswye/nayaHistory/main/firmware-history/<path>`. GitHub
+redirects it since the move to create-collective (2026-09-29), and keeps doing so only while no
+repository is created at `traviswye/nayaHistory` again.
 
 where `<path>` is the catalogue's `historyPath` for that image — `v1.25.1/kb_fwl.bin`,
 `v1.21.0/module/FlashMemory.bin`, and so on. The repository is public, so no token is involved
