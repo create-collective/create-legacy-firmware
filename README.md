@@ -1,4 +1,4 @@
-# nayaHistory
+# create-legacy-firmware Library
 
 A preservation archive of **NayaTech/NayaFlow-releases** — the full public release
 history of the NayaFlow desktop configurator for the Naya Create keyboard, captured
